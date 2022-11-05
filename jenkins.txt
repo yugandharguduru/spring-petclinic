@@ -4,8 +4,13 @@ pipeline {
 		stage('clone the git code') {
 			steps { 
 				git credentialsId: 'admin', url: 'https://github.com/yugandharguduru/spring-petclinic.git'
-				echo "myname is yug"
+				ls -lrt
 			    }
+			}
+			stage('im doing build'){
+			steps {
+			"mvn clean package"
+			}
 			}
 		}
 	}
