@@ -4,7 +4,7 @@ pipeline {
 		stage('clone the git code') {
 			steps { 
 				git branch: 'main', credentialsId: 'admin', url: 'https://github.com/yugandharguduru/spring-petclinic.git'
-				ls -lrt
+
 			    }
 			}
 			stage('im doing build'){
