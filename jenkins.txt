@@ -3,7 +3,7 @@ pipeline {
 	stages {
 		stage('clone the git code') {
 			steps { 
-				git credentialsId: 'admin', url: 'https://github.com/yugandharguduru/spring-petclinic.git'
+				git branch: 'main', credentialsId: 'admin', url: 'https://github.com/yugandharguduru/spring-petclinic.git'
 				ls -lrt
 			    }
 			}
