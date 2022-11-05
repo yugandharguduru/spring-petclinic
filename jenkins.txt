@@ -1,0 +1,12 @@
+pipeline {
+	agent any
+	stages {
+		stage('clone the git code') {
+			steps { 
+				git credentialsId: 'admin', url: 'https://github.com/yugandharguduru/spring-petclinic.git'
+				echo "myname is yug"
+			    }
+			}
+		}
+	}
+	
